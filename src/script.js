@@ -20,6 +20,7 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
+const flagTexture = textureLoader.load('/textures/flag-french.jpg')
 
 /**
  * Test mesh
@@ -48,7 +49,8 @@ const material = new THREE.RawShaderMaterial({
         //uFrequency: { value: 10 }
         uFrequency: { value: new THREE.Vector2(10, 5)},
         uTime: { value: 0},
-        uColor: { value: new THREE.Color('PURPLE')}
+        uColor: { value: new THREE.Color('PURPLE')},
+        uTexture: { value: flagTexture }
     }
 })
 
@@ -118,7 +120,7 @@ const clock = new THREE.Clock()
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
-    console.log(elapsedTime)
+    //console.log(elapsedTime)
     //Update material
     material.uniforms.uTime.value = elapsedTime;
 
