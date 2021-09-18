@@ -1,8 +1,8 @@
-uniform mat4 projectionMatrix;
-uniform mat4 viewMatrix;
-uniform mat4 modelMatrix;
+//uniform mat4 projectionMatrix; //Cause we change RawShaderMAterial to ShaderMaterial
+//uniform mat4 viewMatrix;
+//uniform mat4 modelMatrix;
 
-attribute vec3 position;
+//attribute vec3 position;
 attribute float aRandom;
 
 //varying float vRandom;
@@ -10,7 +10,7 @@ attribute float aRandom;
 uniform vec2 uFrequency;
 uniform float uTime;
 
-attribute vec2 uv;
+//attribute vec2 uv;
 varying vec2 vuv;
 varying float vElevation;
 
