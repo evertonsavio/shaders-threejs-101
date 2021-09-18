@@ -14,3 +14,7 @@ npm run dev
 # Build for production in the dist/ directory
 npm run build
 ```
+
+### Shaders Notes
+
+* By using materials you are using shaders, created by the community.
