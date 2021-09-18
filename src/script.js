@@ -34,7 +34,7 @@ for(let i = 0; i < count; i++){
     randoms[i] = Math.random()
 }
 
-//aRandon "a" attribute "u" uniform "v" varyng
+//aRandon "a" attribute "u" uniform "v" varying
 geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1));
 console.log(geometry)
 
