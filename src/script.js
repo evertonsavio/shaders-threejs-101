@@ -27,6 +27,17 @@ const textureLoader = new THREE.TextureLoader()
 // Geometry
 const geometry = new THREE.PlaneGeometry(1, 1, 32, 32)
 
+const count = geometry.attributes.position.count; //count n of vertex
+const randoms = new Float32Array(count);
+
+for(let i = 0; i < count; i++){
+    randoms[i] = Math.random()
+}
+
+//aRandon "a" attribute "u" uniform "v" varyng
+geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1));
+console.log(geometry)
+
 // Material
 const material = new THREE.RawShaderMaterial({
     vertexShader: testVertexShader,
@@ -72,10 +83,10 @@ scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
-controls.minDistance = 2;
+controls.minDistance = 1;
 controls.maxDistance = 8;
-controls.minPolarAngle = Math.PI/2;
-controls.maxPolarAngle = Math.PI/2;
+controls.minPolarAngle = 0;
+controls.maxPolarAngle = Math.PI;
 controls.rotateSpeed = 0.1;
 
 controls.enableDamping = true
